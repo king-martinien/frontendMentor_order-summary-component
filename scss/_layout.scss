@@ -1,0 +1,131 @@
+#main {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    border-radius: 14px;
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 14px;
+
+    &-image {
+      display: flex;
+      img {
+        width: 100%;
+      }
+    }
+
+    &-body {
+      padding: 20px;
+      background-color: var(--clr-white);
+      text-align: center;
+
+      .card-title {
+        font-size: 20px;
+        color: var(--clr-dark-blue);
+        font-weight: var(--weight-bolder);
+        margin-bottom: 12px;
+      }
+
+      .card-description {
+        color: var(--clr-desaturated-blue);
+        margin-bottom: 14px;
+      }
+
+      .order {
+        border-radius: 14px;
+        background-color: var(--clr-very-pale-blue);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        margin-bottom: 14px;
+        font-size: 12px;
+
+        &-img {
+          display: flex;
+        }
+
+        &-plan {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            color: var(--clr-desaturated-blue);
+            font-weight: var(--weight-bold);
+
+            &:first-child {
+              font-weight: var(--weight-bolder);
+              color: var(--clr-dark-blue);
+            }
+          }
+        }
+
+        .link {
+          color: var(--clr-bright-blue);
+          font-weight: var(--weight-bold);
+          text-decoration: underline;
+
+          &:hover {
+            color: var(--clr-desaturated-blue);
+          }
+        }
+      }
+
+      .card-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        button {
+          padding: 14px;
+          border-radius: 8px;
+          border: none;
+          background-color: transparent;
+          font-weight: var(--weight-bold);
+          cursor: pointer;
+        }
+        .buy-btn {
+          background-color: var(--clr-bright-blue);
+          color: var(--clr-white);
+          transition: 0.3s ease;
+
+          box-shadow: 0 20px 10px var(--clr-pale-blue);
+
+          &:hover {
+            background-color: var(--clr-desaturated-blue);
+          }
+        }
+        .cancel-btn {
+          color: var(--clr-desaturated-blue);
+
+          &:hover {
+            color: var(--clr-dark-blue);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 350px) {
+      width: 320px;
+      font-size: var(--font-size);
+
+      .order {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#footer {
+  .attribution {
+    text-align: center;
+
+    a {
+      color: var(--clr-bright-blue);
+    }
+  }
+}

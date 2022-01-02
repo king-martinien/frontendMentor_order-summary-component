@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --clr-white: hsl(0, 0%, 100%);
+  --font-size: 16px;
+  --family-redHat: "Red Hat Display", sans-serif;
+  --weight-light: 500;
+  --weight-bold: 700;
+  --weight-bolder: 900;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--family-redHat);
+  font-size: var(--font-size);
+  background-color: var(--clr-pale-blue);
+  background-image: url("/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+    background-position: center top;
+    background-size: contain;
+  }
+}
+
+#main {
+  height: 92vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .card {
+  border-radius: 14px;
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+#main .card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .card-image img {
+  width: 100%;
+}
+
+#main .card-body {
+  padding: 20px;
+  background-color: var(--clr-white);
+  text-align: center;
+}
+
+#main .card-body .card-title {
+  font-size: 20px;
+  color: var(--clr-dark-blue);
+  font-weight: var(--weight-bolder);
+  margin-bottom: 12px;
+}
+
+#main .card-body .card-description {
+  color: var(--clr-desaturated-blue);
+  margin-bottom: 14px;
+}
+
+#main .card-body .order {
+  border-radius: 14px;
+  background-color: var(--clr-very-pale-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+
+#main .card-body .order-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main .card-body .order-plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main .card-body .order-plan span {
+  color: var(--clr-desaturated-blue);
+  font-weight: var(--weight-bold);
+}
+
+#main .card-body .order-plan span:first-child {
+  font-weight: var(--weight-bolder);
+  color: var(--clr-dark-blue);
+}
+
+#main .card-body .order .link {
+  color: var(--clr-bright-blue);
+  font-weight: var(--weight-bold);
+  text-decoration: underline;
+}
+
+#main .card-body .order .link:hover {
+  color: var(--clr-desaturated-blue);
+}
+
+#main .card-body .card-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#main .card-body .card-btns button {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+}
+
+#main .card-body .card-btns .buy-btn {
+  background-color: var(--clr-bright-blue);
+  color: var(--clr-white);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0 20px 10px var(--clr-pale-blue);
+          box-shadow: 0 20px 10px var(--clr-pale-blue);
+}
+
+#main .card-body .card-btns .buy-btn:hover {
+  background-color: var(--clr-desaturated-blue);
+}
+
+#main .card-body .card-btns .cancel-btn {
+  color: var(--clr-desaturated-blue);
+}
+
+#main .card-body .card-btns .cancel-btn:hover {
+  color: var(--clr-dark-blue);
+}
+
+@media screen and (min-width: 350px) {
+  #main .card {
+    width: 320px;
+    font-size: var(--font-size);
+  }
+  #main .card .order {
+    font-size: 14px;
+  }
+}
+
+#footer .attribution {
+  text-align: center;
+}
+
+#footer .attribution a {
+  color: var(--clr-bright-blue);
+}
+/*# sourceMappingURL=style.css.map */
